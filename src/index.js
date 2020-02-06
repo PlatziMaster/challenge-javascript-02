@@ -1,11 +1,19 @@
 const fibonacci = (n) => {
-  const ary = Array(n).fill(1,0,n);
+  let ary = null;
 
-  ary.forEach((val, index, ar) => 
-    index >= 2 ? ar[index] = ar[index - 2] + ar[index - 1] : ''
+  if ( Number.isSafeInteger(n) ) {
+    ary = Array(Math.abs(n)).fill(1);
+    ary.unshift(0);
+    ary.forEach((v, i, a) => 
+      i >= 2 ? a[i] = a[i - 2] + a[i - 1] : ''
+    );
+  }
+    
+  return (
+    n < 0 
+    ? ary.map((v, i) => i%2 === 0 && v !== 0 ? v * -1 : v).reverse()
+    : ary
   );
-  
-  return ary;
 };
 
 module.exports = fibonacci;
