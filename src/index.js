@@ -6,7 +6,6 @@ const fibonacci = n => {
     previousNumber[0] = previousNumber[1];
     previousNumber[1] = serie[i];
   }
-  console.log('serie', serie);
   return serie;
 };
 
