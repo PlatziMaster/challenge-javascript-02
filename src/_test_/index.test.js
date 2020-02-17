@@ -1,4 +1,4 @@
-const fibonacci = require('../index');
+const fibonacci = require('../utils/fibonacci');
 
 describe('fibonacci', () => {
   it('Debe calcular fibonacci correctamente', () => {
