@@ -1,4 +1,4 @@
-name: Test triangleArea function
+name: Test fibonacci function
 
 on: [pull_request]
 
