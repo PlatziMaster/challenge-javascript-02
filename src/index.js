@@ -1,20 +1,11 @@
 const fibonacci = (n) => {
 
-  let a = 0;
-  let b = 1;
-  let c = 0;
-  let array = new Array(n);
+  let result = [1];
 
-  for (let i = 0; i < n; ) {
-    c = a + b;
-    a = b;
-    b = c;
-    array[i] = c;
-    array[i++] = a;
-  }
-  
-  return array;
+  for (let i = 1; i < n; i++)
+    result.push((i > 1) ? result[i - 1] + result[i - 2] : 1);
+
+  return result;
 }
-
 
 module.exports = fibonacci;
