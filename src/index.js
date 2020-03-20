@@ -1,20 +1,36 @@
 const fibonacci = (n) => {
 
     let array = [];
-    let num1 = 0;
+    let num1 = 1;
     let num2 = 1;
 
-    let add = num1 + num2;
-    array.push(num1, num2);
+    if (n === 1) {
 
-    for (let i = 2; i < n; i++) {
-        add = num1 + num2;
-        array.push(add);
+        array.push(num1)
+        return array;
 
-        num1 = num2;
-        num2 = add;
+    } else if (n === 2) {
+
+        array.push(num1, num2);
+        return array;
+
+    } else {
+
+        let add = num1 + num2;
+        array.push(num1, num2);
+
+        for (let i = 2; i < n; i++) {
+            add = num1 + num2;
+            array.push(add);
+
+            num1 = num2;
+            num2 = add;
+        }
+
+        return array;
+
     }
-    return array
+
 }
 
 module.exports = fibonacci;
