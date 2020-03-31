@@ -1,8 +1,7 @@
 const fibonacci = (n) => {
-  const fArray = [n];
+  const fArray = [];
   for(let i = 0; i < n; ++i){
-    (i==0 || i==1) ? fArray[i] = 1 :
-    fArray[i] = fArray[i-1] + fArray[i-2];
+    fArray[i] = (i < 2) ? 1 : fArray[i-1] + fArray[i-2]
   }
   return fArray;
 }
