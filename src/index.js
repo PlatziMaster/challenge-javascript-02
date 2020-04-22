@@ -6,8 +6,7 @@ const fibonacci = (n) => {
   function* fibo() {
     yield 0;
     yield 1;
-    yield 1;
-    let a = 1;
+    let a = 0;
     let b = 1;
     while (true) {
       const nextNumber = a + b;
