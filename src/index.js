@@ -1,27 +1,31 @@
 const fibonacci = (n) => {
   if (n < 0) {
-    return console.error(new Error('No puede ser negativo'));
+    throw new Error('No puede ser negativo');
+  }
+
+  function* fibo() {
+    yield 0;
+    yield 1;
+    yield 1;
+    let a = 1;
+    let b = 1;
+    while (true) {
+      const nextNumber = a + b;
+      a = b;
+      b = nextNumber;
+      yield nextNumber;
+    }
   }
 
   let array = [];
+  let f = fibo();
 
   for (let i = 0; i <= n; i++) {
-    array.push(fibo(i));
+    array.push(f.next().value);
   }
 
-  return array
+  return array;
 }
 
-const fibo = (n) => {
-  if (n === 0) {
-    return 0;
-  }
-
-  if (n === 1) {
-    return 1;
-  }
-
-  return fibo(n-1) + fibo(n-2);
-}
 
 module.exports = fibonacci;
