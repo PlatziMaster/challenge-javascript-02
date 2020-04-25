@@ -1,26 +1,32 @@
-const memoization = (n, memo) => {
-  // Return the n Fibonacci number
-  if (n === 0 || n === 1) {
-    return (memo[n] = 1);
+function fibonacci(n) {
+  // Initialize cache map with two first fibonacci numbers
+  const cache = new Map()
+  cache.set(1, 1)
+  cache.set(2, 1)
+
+  // if n = 1 return the corresponding value
+  if (n === 1) {
+    return [cache.get(n)]
   }
 
-  if (memo[n]) {
-    return (memo[n] = memo[n]);
+  // Recursively memoize the fibonacci sequence
+  function memoize(n, cache) {
+    if (cache.has(n)) {
+      return cache.get(n)
+    }
+
+    let value = memoize(n - 1, cache) + memoize(n - 2, cache)
+    // store the value found in cache
+    cache.set(n, value)
+
+    return value
   }
 
-  return (memo[n] = memoization(n - 1, memo) + memoization(n - 2, memo));
-};
+  memoize(n, cache)
 
-const fibonacci = n => {
-  const memo = {};
+  // Map.values() return an object iterator
+  // use spread operator(...) to returns an array
+  return [...cache.values()]
+}
 
-  memoization(n, memo);
-
-  const result = Object.values(memo);
-
-  // Return a slice from the result
-  // because it start counting from 0
-  return result.slice(0, n);
-};
-
-module.exports = fibonacci;
+module.exports = fibonacci
