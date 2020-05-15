@@ -1,11 +1,20 @@
-const fibonacci = (n) => {
+const fibonacci = (n, x) => {
 
-  if (n == 1) return 0
-  if (n == 2) return 1
+    let a = n[0]
+    let b = n[1]
+    let next,
+    count = 2
 
-  return fibonacci(n - 1) + fibonacci(n - 2)
+    while (count < x ) {
+      next = a + b
+      a = b
+      b = next 
+      n.push(next)
+      count++
+    }
 
-  }
+    return n
+}
 
 
 
