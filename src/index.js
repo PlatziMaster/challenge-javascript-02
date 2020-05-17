@@ -1,5 +1,5 @@
 const fibonacci = (n) => {
-  let serie = [];
+  const serie = [];
   for (let x = 0; x < n; x++) {
     if (x < 2) {
       serie[x] = 1;
