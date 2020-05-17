@@ -1,18 +1,18 @@
 const fibonacci = (n) => {
-  let a = [];
+  let fibArray = [];
   if(n === 1){
-    a.push(1)
+    fibArray.push(1)
   }
   for(let i = 1; i < n; i++){
       if(i <= 1){
-        a.push(1);
+        fibArray.push(1);
       }
-      const a1 = a[i - 1]
-      const a2 = a[i - 2] === undefined ? 0 : a[i - 2];
-      a.push(a1 + a2);
+      const FirstlastNum = fibArray[i - 1]
+      const SecondLastNum = fibArray[i - 2] === undefined ? 0 : fibArray[i - 2];
+      fibArray.push(FirstlastNum + SecondLastNum);
   }
 
-  return a
+  return fibArray
 }
 
 module.exports = fibonacci;
