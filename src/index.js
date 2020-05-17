@@ -1,14 +1,13 @@
 const fibonacci = (number) => {
-  let fib1 = 0;
-  let fib2 = 1;
   let sequenceFib = [];
-  let temp;
 
-  for (let i = 0; i < number; i++) {
-    sequenceFib.push(fib2);
-    temp = fib2;
-    fib2 = fib1 + fib2;
-    fib1 = temp;
+  if (number === 1) {
+    sequenceFib.push(1);
+  } else {
+    sequenceFib = [1, 1];
+    for (let i = 0; i < number - 2; i++) {
+      sequenceFib.push(sequenceFib[i] + sequenceFib[i + 1]);
+    }
   }
 
   return sequenceFib;
