@@ -1,6 +1,6 @@
 const fibonacci = (n) => {
-  var secuencia = [];
-  var a, b, resultado;
+  const secuencia = [];
+  let a, b, resultado;
   a = 0;
   b = 1;
   resultado = b;
@@ -12,5 +12,4 @@ const fibonacci = (n) => {
   }
   return secuencia
 }
-fibonacci(10)
 module.exports = fibonacci;
