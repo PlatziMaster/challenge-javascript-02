@@ -1,15 +1,14 @@
 const fibonacci = (n) => {
   const sequence = []
-  let a = 1
-  let b = 0
-  let tmp
-  sequence.push(b)
-  sequence.push(a)
+  let biggerNumber = 1
+  let lowerNumber = 0
+  let temporary
+  sequence.push(biggerNumber)
   while(sequence.length < n){
-    tmp = a
-    a += b
-    b = tmp
-    sequence.push(a)
+    temporary = biggerNumber
+    biggerNumber += lowerNumber
+    lowerNumber = temporary
+    sequence.push(biggerNumber)
   }
   return sequence
 }
