@@ -1,5 +1,5 @@
 const fibonacci = (n) => {
-    fib = new Array(n).fill(0);
+    let fib = [];
     if (n < 2) {
         fib[0] = n;
         return fib;
@@ -7,7 +7,7 @@ const fibonacci = (n) => {
         fib[0] = 1;
         fib[1] = 1;
         for (let i = 2; i < n; i++) {
-            fib[i] = fib[i - 1] + fib[i - 2];
+            fib.push(fib[i - 1] + fib[i - 2]);
         }
     }
     return fib;
