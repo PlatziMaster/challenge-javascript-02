@@ -10,10 +10,7 @@ const fibonacci = (n) =>{
       num1=newNum
 
     }
-    console.log(arr);
     return arr;
-   
-  
 };
 
 
