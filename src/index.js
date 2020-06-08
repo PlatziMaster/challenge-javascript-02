@@ -1,15 +1,15 @@
 const fibonacci = (n) => {
-  const finonacciChallenge = [];
+  const fibonacciChallenge = [];
   let a = 1;
   let b = 1;
   for (let i = 1; i <= n; i++) {
-    finonacciChallenge.push(a);
+    fibonacciChallenge.push(a);
     let c = a + b
     a = b;
     b = c;
   }
 
-  return finonacciChallenge;
+  return fibonacciChallenge;
 }
 
 
