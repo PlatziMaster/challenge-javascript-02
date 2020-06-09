@@ -1,12 +1,13 @@
 const fibonacci = ( n ) => {
-  let a = 0, b = 1, c = 1, fibonacciArray = [];
+  let valueA = 0, valueB = 1, valueC = 1, fibonacciArray = [];
 	for ( let i = 0; i < n; i++ ) {
-		a = b;
-		b = c;
-		c += a;
-		fibonacciArray.push ( a );
+		valueA = valueB;
+		valueB = valueC;
+		valueC += valueA;
+		fibonacciArray.push ( valueA );
 	};
     return fibonacciArray;
 }
+
 
 module.exports = fibonacci;
