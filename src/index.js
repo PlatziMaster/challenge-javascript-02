@@ -1,9 +1,16 @@
 const fibonacci = (n) => {
-    let arreglo = [];
+    let fibonacci = [];
     for(let i = 0; i < n; i++){
-      (i === 0) ? arreglo.push(1) : arreglo.push(arreglo[i-2] + arreglo[i-1] || 1)
+      if(i === 0){
+        fibonacci.push(1)
+      }else{
+        fibonacciCalc = (fibonacci[i-2] + fibonacci[i-1]) || 1
+        fibonacci.push(fibonacciCalc)
+      }
+      //Shorter solution
+      // (i === 0) ? fibonacci.push(1) : fibonacci.push(fibonacci[i-2] + fibonacci[i-1] || 1)
     }
-    return arreglo;
+    return fibonacci;
   }
 
   module.exports = fibonacci;
