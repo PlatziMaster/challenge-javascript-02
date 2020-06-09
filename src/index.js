@@ -1,12 +1,12 @@
 const fibonacci = (n) => {
   const fibonacciChallenge = [];
-  let a = 1;
-  let b = 1;
+  let fibonacciNumber = 1;
+  let iterateNumber = 1;
   for (let i = 1; i <= n; i++) {
-    fibonacciChallenge.push(a);
-    let c = a + b
-    a = b;
-    b = c;
+    fibonacciChallenge.push(fibonacciNumber);
+    let sumValues = fibonacciNumber + iterateNumber
+    fibonacciNumber = iterateNumber;
+    iterateNumber = sumValues;
   }
 
   return fibonacciChallenge;
