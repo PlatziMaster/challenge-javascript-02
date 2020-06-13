@@ -4,9 +4,11 @@ const fibonacci = (n) => {
     if (i <= 1) {
       fibonacciArray.push(1);
     } else {
-      const a = i - 1;
-      const b = i - 2;
-      const suma = fibonacciArray[a] + fibonacciArray[b];
+      const firstPrecedingNumber = i - 1;
+      const secondPrecedingNumber = i - 2;
+      const suma =
+        fibonacciArray[firstPrecedingNumber] +
+        fibonacciArray[secondPrecedingNumber];
       fibonacciArray.push(suma);
     }
   }
