@@ -1,2 +1,2 @@
 var fibonacci = require('./index');
-fibonacci(1);
+fibonacci(8);
