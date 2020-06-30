@@ -1,14 +1,19 @@
 const fibonacci = (n) => {
+  var array = [];
   
-  let numeros=[0,1];
-
-  for (let i = 2; i < n; i++) 
-  {
-      numeros[i] = numeros[i - 2] + numeros[i - 1];
+  if (n === 1) {
+    array = [1]; 
+    return array;
   }
+
+  else{
+    array = [1,1];
+    for (var i = 2; i < n; i++ ) {
+
+      array[i] = array[i - 2] + array[i -1];
+    }
+  }
+  return array;
+}
   
-  return numeros;
-
-
-  }
   module.exports = fibonacci;
