@@ -1,0 +1,32 @@
+{
+  "name": "challenge-js-02",
+  "version": "1.0.0",
+  "description": "Numero Fibonacci",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlatziMaster/challenge-js-02.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Diego De Granda <degranda@platzi.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PlatziMaster/challenge-js-02/issues"
+  },
+  "homepage": "https://github.com/PlatziMaster/challenge-js-02#readme",
+  "devDependencies": {
+    "husky": "^4.2.1",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/(node_modules)/"
+    ]
+  }
+}
