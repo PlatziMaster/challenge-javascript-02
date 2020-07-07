@@ -14,5 +14,4 @@ const fibonacci = (n) => {
 
 fibonacci(10);
 
-
 module.exports = fibonacci;
