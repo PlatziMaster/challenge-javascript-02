@@ -19,7 +19,7 @@ npm run test
 Genera una función que devuelve una secuencia de Fibonacci como una array
 
 ### Enviar solución de reto
-Debes hacer un "Fork" de este proyecto, revolver los problemas y crear un Pull Request hacia este repositorio.
+Debes hacer un "Fork" de este proyecto, resolver los problemas y crear un Pull Request hacia este repositorio.
 
 ### Contribuir
 Si alguien quiere agregar o mejorar algo, lo invito a colaborar directamente en este repositorio: [challenge-javascript-02](https://github.com/platzimaster/challenge-javascript-02/)
