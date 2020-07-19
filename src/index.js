@@ -1,16 +1,17 @@
 
 const fibonacci = (n) => {
-  const arrayFb = [1, 1]
-  if(n === 1) {
-    return [1];
-  } if (n === 2) {
-    return [1, 1];
-  } if (n > arrayFb.length) {
-    for (let i = 0; i < n - 2; i++) {
-      arrayFb.push(arrayFb[i] + arrayFb[i + 1]);
-      return arrayFb;
-    }
-    return arrayFb;
+  let arrayFb =[1, 1]
+  for(var i = 0; i < n ; i++){
+    if(i === 0) {
+      arrayFb =[1];
+    } if(i === 1){
+      arrayFb =[1, 1];
+    } else if(i > 1) {
+      arrayFb[i] = (arrayFb[i-1] + arrayFb[i-2])
+    } 
   }
+
+  return arrayFb
 }
+
 module.exports = fibonacci;
