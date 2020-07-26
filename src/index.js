@@ -1,6 +1,6 @@
 const fibonacci = (n) => {
   var fibonacci = [];
-  fibonacci[0] = 0;
+  fibonacci[0] = 1;
   fibonacci[1] = 1;
 
   if( n > 1 ){
