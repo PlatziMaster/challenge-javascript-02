@@ -4,6 +4,7 @@ const fibonacci = (n) => {
   for (var i = 2; i <= n; i++) {
     fibonacci[i] = fibonacci[i-2] + fibonacci[i-1];
   }
+  fibonacci.shift();
   return fibonacci;
 }
 
