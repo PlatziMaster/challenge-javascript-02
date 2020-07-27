@@ -1,7 +1,7 @@
 const fibonacci = (n) => {
     let fibonacciArray = [];
     fibonacciArray.push(n);
-    for(var i=0; i<100; i++){
+    for(var i=0; i<n; i++){
         let fibonacciArrayLenght = fibonacciArray.length;
         let fibonacciLastValue = fibonacciArray[fibonacciArrayLenght - 1];
         let fibonacciAlmostLastValue = fibonacciArray[fibonacciArrayLenght -2];
