@@ -1,6 +1,9 @@
 const fibonacci = require('../index');
+const fibonacciGenerator = require('../fibonacciGenerator');
 
 describe('fibonacci', () => {
+  const times = 40;
+
   it('Debe calcular fibonacci correctamente', () => {
     expect(fibonacci(1)).toEqual([1]);
     expect(fibonacci(2)).toEqual([1, 1]);
@@ -13,4 +16,8 @@ describe('fibonacci', () => {
     expect(fibonacci(9)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34]);
     expect(fibonacci(10)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
   });
+
+  it(`Time to execute with normal recursion. Times: ${times}`, () => {
+    expect(fibonacci(times).length).toEqual(times)
+  })
 });

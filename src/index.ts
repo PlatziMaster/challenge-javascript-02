@@ -17,8 +17,6 @@ function fibonacciNumber(n: number): number {
  * @returns array with the numbers that create the fibonacci result
  */
 function fibonacci(n: number): number[] {
-  if (n === 0) return [0];
-
   let acc: number[] = [];
 
   for (let index = 1; index <= n; index++) {
