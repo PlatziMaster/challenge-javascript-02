@@ -1,3 +1,5 @@
+'use strict'
+
 const fibonacci = require('../index');
 
 describe('fibonacci', () => {
